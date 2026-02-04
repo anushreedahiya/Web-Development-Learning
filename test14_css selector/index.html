@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selector using internal css</title>
+    <style>
+        /* Element Selector */
+        div{
+            background-color: yellow;
+        }
+        /* Class Selector */
+        .firstdiv{
+            background-color: red;
+        }
+        /* Id Selector */
+        #thirddiv{
+            background-color: green;
+        }
+        /* Child Selector */
+        div > p {
+            color: blue;
+            background-color: brown;
+        }
+        /* Descendant Selector */
+        div p{
+            color: yellow;
+            background-color: blue;
+        }
+        /* Universal selector */
+        *{
+            margin: 10;
+            padding: 1%;
+        }
+        /* Pseudo Selector */
+        a:visited{
+            color: chocolate;
+        }
+        a:link{
+            color: green;
+        }
+        a:active{
+            background-color: red;
+        }
+        a:hover{
+            background-color: aqua;
+        }
+        p:first-child{
+            background-color: rgb(126, 28, 44);
+        }
+    </style>
+</head>
+<body>
+    <div class="firstdiv">
+        i am a div as simple as that
+    </div>
+
+    <div>
+        I am another div but i dont want its baackground red therefore will be using specific selector class, id or something.
+    </div>
+
+    <div id="thirddiv">
+        I am third div with an id lets say. Priority-wise, Id has top priority followed by class then normal element selector.
+    </div>
+
+    <div>
+        <p>hello my name is css with a child selector property and i am a paraa inside a div and i am direct child of this div.</p>
+    </div>
+    
+    <a href="https://www.facebook.com">Open Facebook</a>
+    <div>
+        i am a div.
+        <article>
+            <p>i am a para but i am inside an article not directly inside a div therefore child selector property wont apply on me.
+                if i want that div property apply can use descendant selector.
+            </p>
+        </article>
+    </div>
+
+    <a href="https://www.google.com">Open Google</a><br>
+    
+    <main class="one">
+        <p>I am a selector class main with the class name as one.</p>
+        <p>I am second child in main butthis is not used that much pseudo class something.</p>
+    </main>
+    <ol>
+        Priority level top favourable to bottom less favourable:-
+        <li>Descendant Selector</li>
+        <li>Child Selector</li>
+        <li>ID Selector</li>
+        <li>Class Selector</li>
+        <li>Element Selector</li>
+        <li>Universal Selector</li>
+    </ol>
+</body>
+</html>

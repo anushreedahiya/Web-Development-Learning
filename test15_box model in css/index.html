@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model in Css</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {  /* this is my commom propety for all box class */
+            background-color: rgb(73, 151, 151);
+        }
+
+        .box1{
+            color: yellowgreen;
+            padding: 10px;
+            margin: 5px;
+            border: 5px dotted blueviolet;
+            height: 200px; /*this is the content height only.*/
+            box-sizing: border-box; /*this is the total height that include border, padding and content height only. margin isn't included and this means that the height above fiven by me is sum of the 3 stated above.*/
+        }
+
+        .box2{
+            color: pink;
+            padding: 10px;
+            margin: 5px;
+            border: 5px dotted black;
+            height: 200px;
+            box-sizing: border-box; 
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        Order of content in a box Model
+        <li>Margin</li>
+        <li>Border</li>
+        <li>Padding</li>
+        <li>Main Content</li>
+    </ol>
+    <div class="box box1">I am a box for div with 2 class name box and box1.</div>
+    <div class="box box2">hello  i am box for div with 2 class names as box and box2.</div>
+    <br>
+    <p>
+        1. now in style if i write m:0 and press enter it means margin:0 and same p:0 means padding as 0. Initial values are replaced with the later one.<br>
+        2. we can give multiple class name just separating the names through a space.<br>
+        3. total height and width of an element will be the sum of margin+ border+ padding+ the element space itself.<br>
+        4. Padding is imagined as within the element whereos margin is outside and hence no background-color will be applied there of the element.<br>
+        5. Margin collapse concept states that when the margin of 2 element collide then the margin with highest value is given preference there and other margin is neglected. therefore margin only apply once.
+    </p>
+</body>
+</html>
