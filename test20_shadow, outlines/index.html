@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css shadows and outlines</title>
+    <style>
+        .box{
+            border: 2px solid maroon;
+            padding: 34px;
+            box-shadow: 5px 5px 15px 5px #883c3c;
+        }
+        .text-shadow{
+            text-shadow: 10px 5px 3px #ed1717;
+            outline: 2px solid black;
+            border: 2px solid green;
+            border-radius: 20px;
+            outline-offset: 4px;
+        }
+    </style>
+</head>
+<body>  
+    <div class="box">
+        I am a box.
+    </div>
+
+    <p class="text-shadow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore hic quas eos quis quasi, vero, nisi amet magnam explicabo repudiandae quia iusto officia sit quaerat soluta, animi dolores accusantium! Iste iusto, possimus quidem beatae perspiciatis tenetur repellat! Totam rem officia, quae repellat impedit nulla architecto omnis non officiis asperiores, voluptatum molestiae quia, culpa nostrum dolor.
+    </p>
+
+    <p class="notes">
+        box-shadow contains the following element in it:-
+        <ol>
+            <li>h-offset: shadow horizontal position</li>
+            <li>v-offset: shadow vertical position</li>
+            <li>blur: larger the value, blurrier the shadow</li>
+            <li>spread: expand or shrinnk shadow size</li>
+            <li>color: defines shadow color</li>
+            <li>inset: makes shadow inner</li>
+        </ol>
+
+        text-shadow contains the following elements:-
+        <ol>
+            <li>h-offset</li>
+            <li>v-offset</li>
+            <li>blur</li>
+            <li>co lor</li>
+        </ol>
+
+        outline(drawn line around the element outside the border to make eleemnt stand out) has the following component:-
+        <ol>
+            <li>width</li>
+            <li>style</li>
+            <li>color</li>
+        </ol>
+    </p>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Sizing Units-px, rem, em, vh, vw, %</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid blueviolet;
+            /* width: 233px; */
+            width: 100vw;
+            height: 10vh;
+            /* margin: auto;  *//*automatically apply margin from left and right , only applicable for block elements like div...same thing can't be applied to span*/
+            background-color: aquamarine;
+        }
+
+        .container{
+            box-sizing: border-box;
+            border: 2px solid blueviolet;
+            width: 80vw;
+            height: 60vh;
+            min-height: 70vh;
+            margin: 23px auto;
+            font-size: 14px;
+            background-color: aquamarine;
+        }
+
+        .container p{
+            /* font-size: 1.5em; */
+            font-size: 1.5rem;
+            width: 50%;
+        }
+
+        html{   /* this is my root element */
+            font-size: 12px;
+        }
+
+        .mycont{
+            background-color: pink;
+            color: blue;
+            font-size: 16px;
+            width: 100vmin;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a box.
+    </div><br>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint incidunt debitis, veniam cupiditate iste eius pariatur excepturi quod officia perspiciatis exercitationem et porro, odio corrupti blanditiis quo deleniti eveniet ratione! Excepturi dolorum, incidunt amet optio rem, reiciendis iste consectetur itaque dicta et doloribus distinctio, magnam esse fugit! Corrupti soluta expedita tempora vero modi dignissimos voluptatibus molestiae.
+        </p>
+    </div>
+    <div class="mycont">
+        i am another container for testing.<br>
+        we have vmin where in devices the sizing will be according to height. but it depend on device also.<br>
+        if i want in phone its "vh" and laptop its "vw" then we will use "vmax".<br>
+        hence vmin in phone is width whereas in laptop is height.
+    </div>
+    <ol>
+        Types of sizing units in CSS.
+        <li>px(pixel): it is 196th of an inch.</li>
+        <li>rem(Root em): Relative to the root (&lt;html&gt;) font size</li>
+        <li>em: Relative to the font size of the parent</li>
+        <li>vh(viewport height): Relative to the height of the viewport</li>
+        <li>vw(viewport width): Relative to the width of the viewport</li>
+        <li>%</li>
+    </ol>
+</body>
+</html>

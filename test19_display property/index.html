@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS display property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid blue;
+            display: inline-block;
+            padding: 45px;
+            margin: 34px;
+        }
+
+        .box1{
+            /* display: none; */
+            /* visibility: hidden;  */ /* through this box will be hidden but its space will be left */
+        }
+
+        .newbox{
+            display: flex;
+            justify-content: center;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">
+        I am a box.
+    </div>
+    <span>
+        this is an inline span already.<br>
+    </span>
+    <div class="newbox">
+        i am a new box with display as flex
+    </div>
+    <div class="detail">
+        inline element dont take top padding, margin directly and even cant set proper width also. therefore for that we need to use inline-block display feature in css.
+    </div>
+</body>
+
+</html>
