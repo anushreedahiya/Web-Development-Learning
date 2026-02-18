@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow property of CSS</title>
+    <style>
+        .box{
+            width: 30vw;
+            height: 40vh;
+            border: 2px solid black;
+            /* overflow: scroll; */
+            /* overflow: auto;
+            overflow-x: hidden;
+            overflow-y: scroll; */
+            overflow: hidden scroll; /* overflow is hidden in x and scroll in y */
+            /* overflow: clip; */ /* same like hidden but in this scrolling also not allowed*/
+            /* white-space: nowrap; */
+            /* text-overflow: ellipsis; */ /* 3 dots will come in the end like "..." */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis excepturi quia labore inventore sed animi placeat saepe illo itaque. Ullam ex dignissimos eligendi tenetur saepe, explicabo voluptates impedit officiis vel? Omnis veniam praesentium modi dolorum voluptate ut quas! Delectus unde, deleniti porro voluptates tenetur exercitationem modi eveniet aspernatur officia assumenda officiis nihil magni numquam, sit dolorum.
+    </div>
+</body>
+</html>

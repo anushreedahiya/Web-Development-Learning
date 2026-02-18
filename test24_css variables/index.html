@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Variables</title>
+    <style>
+        :root{   /*global variable*/
+            --color: rgb(98, 15, 98);
+            --seccolor: rgb(165, 23, 165);
+            --defpad: 23px;
+            --defop: 0.6;
+        }
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            /* background-color: rgb(217, 96, 116); */
+            background-color: var(--seccolor);
+        }
+        
+        .nav{
+            background-color: var(--color);
+        }
+
+        /* div:first-child{  /* can use .nav aslo */
+            /* background-color: rgb(226, 140, 154);
+        } */ 
+        
+        ul{
+            display: flex;
+        }
+        
+        ul li{
+            /* opacity: 0.3; */
+            opacity: var(--defop);
+            list-style: none;
+            /* padding: 35px; */
+            padding: var(--defpad);
+            border: 4px solid var(--seccolor);
+        }
+        
+        ul li:first-child{
+            --color: rgb(173, 88, 19);  /* here color will be treated as local variable */
+            background-color: var(--color, pink);
+            /*if the variable is not found, then for that we can have an alternate value stored already in the element*/
+        }
+    </style>
+
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Cantact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo deserunt odio, eligendi magni quam provident tempore adipisci soluta eos, totam pariatur dolorem. Accusamus, quod vitae! Cum ipsam necessitatibus, magnam quibusdam tenetur esse omnis in non aut delectus debitis eligendi. Esse impedit consectetur aspernatur itaque asperiores!
+    </div>
+
+    <p>
+        Apart from color variable can also store different properties and it is stored in :root in style sheet.<br>
+        we can make our own variable just to initialize them we need to put -- as its prefix.
+    </p>
+</body>
+</html>
