@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Css Selectors</title>
+    <style>
+        /* .box:first-child{
+            background-color: pink;
+        } */
+
+        /* .box::first-line{
+            color: blue;
+        } */
+
+        .boxes *{
+            color: purple;
+            border: 2px solid black;
+            margin: 1px;
+        }
+
+        /* [data-color="primary"]{
+            padding-top: 45px;
+        } */
+
+        /* This is grouping of eleemnts to apply same property. */
+        /* p, a, .box, [data-color="primary"]{
+            padding-top: 45px;
+        } */
+
+        /* .box:nth-child(even){
+            background-color: aquamarine;
+        } */
+
+        /* .box:nth-last-child(2){
+            background-color: blueviolet;
+        } */
+
+        .boxes::before{
+            content: "Sigma Web Development";
+            color: orange;
+        }
+
+        .boxes::after{
+            content: "More on CSS Selector";
+            color: red;
+        }
+
+        .boxes::selection{
+            background-color: black;
+            color: aqua;  /*this will change the color of the selected text within the boxes class.*/
+        }
+
+        .box::first-letter{
+            color: peru;
+            font-size: 23px;
+        }
+
+        input::placeholder{
+            color: rgb(181, 181, 210);
+            font-size: 10px;
+        }
+        </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">
+            hey i am box first child. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, totam illum corporis sapiente eaque iusto. Natus in quia non mollitia! Repellat fugit est similique! Distinctio cum aliquam explicabo reiciendis animi perferendis cumque maxime sunt.
+        </div>
+        <div class="box">
+            hey i am box 2nd child.
+        </div>
+        <div class="box">
+            hey i am box 3rd child.
+        </div>
+        <input type="text" placeholder="Type Your Name Here: ">
+    </div>
+
+    <p>
+        Through CSS one can add an element dynamically using before or after property.
+    </p>
+</body>
+</html>

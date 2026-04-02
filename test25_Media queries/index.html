@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+
+        @media screen and (orientation: landscape) {
+            body{
+                border: 2px solid purple;
+            }
+        }
+
+        @media only screen and (max-width:455px) {
+            body{
+                /*if width is smaller than 455px then blue color will be applied*/
+                background-color: blue;
+            }
+
+            .boxes{
+                flex-direction: column;
+            }
+        }
+
+        .boxes{
+            display: flex;
+        }
+
+        .box{
+            width: 344px;
+            height: 144px;
+            background-color: steelblue;
+            padding: 3px;
+            margin: 3px;
+        }
+
+        /* @media not|only mediatype and (expression) {
+            CSS-code;
+        } */
+    </style>
+</head>
+<body>
+    <div>
+        Hey I am pink body division.
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <p>
+        Media Query are used to make responsive websites.
+    </p>
+</body>
+</html>

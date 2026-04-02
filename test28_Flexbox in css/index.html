@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container{
+            border: 2px solid violet;
+            display: flex;
+            height: 60vh;
+            /* justify-content: center; */ /*horizontal alignment */
+            align-items: center;  /*vertical alignment*/
+            align-content: center;  /*When we have multiple lines*/
+            /*There is no justify-items in flexbox*/
+            /* flex-direction: column-reverse;
+            flex-direction: column;
+            flex-wrap: wrap-reverse;
+            flex-wrap: wrap;            
+            flex-flow: row wrap-reverse; */
+            /* flex-flow: row wrap; */
+            /* gap: 30px; */
+            /* column-gap: 10px;
+            row-gap: 10px; */
+            gap: 50px 10px;  /*row and cloumn*/
+        }
+
+        .items{
+            /* flex-grow: 1; */  /*how much place will it take*/
+            height: 42px;
+            width: 42px;
+            border: 2px solid black;
+            /* margin: 2px; */
+            background-color: pink;
+        }
+
+        .order-1{
+            order: 1;  /*more the order later the element will come where 1 is lowest and if all element dont have order given then default is 0*/
+        }
+
+        .order-2{
+            order: 2;
+        }
+
+        .order-3{
+            order: 3;
+        }
+
+        .item1{
+            /* flex-grow: 10; */
+            flex-shrink: 10;
+            align-self: flex-start;  /*aligning a single element either at start, end or at baseline*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="items item1">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items order-1">4</div>
+            <div class="items">5</div>
+            <div class="items">6</div>
+            <div class="items order-3">7</div>
+            <div class="items">8</div>
+            <div class="items">9</div>
+            <div class="items">10</div>
+            <div class="items">11</div>
+            <div class="items">12</div>
+            <div class="items">13</div>
+            <div class="items">14</div>
+            <div class="items order-2">15</div>
+            <div class="items">16</div>
+            <div class="items">17</div>
+            <div class="items">18</div>
+            <div class="items">19</div>
+            <div class="items">20</div>
+            <div class="items">21</div>
+            <div class="items">22</div>
+            <div class="items">23</div>
+            <div class="items">24</div>
+            <div class="items">25</div>
+        </div>
+    </main>
+
+    <p>
+        <ol>
+            <li>Flex direction by default is left to right.</li>
+            <li>There is no justify-items in flexbox.</li>
+            <li>In flex-flow, we need to tell fex-direction first then flex-wrap value that can be wrap or wrap-reverse</li>
+            <li style="color: red;">i.e., flex-flow: flex-direction flex-wrap</li>
+            <li>More the order value, more the element is shifted to end.</li>
+            <li>if in a group of 15 elements only 1 element order is defined then that element will go to end and rest remain unchanged as default order is 0.</li>
+            <li>by default flex-grow is 0 and it means how much space will the element take in comparison to others.</li>
+            <li>Flex-shrink is the ability of the element to shrink when the dimension of the page is changed and wrap isn't there.</li>
+            <li>Align-self is used to align an element either to flex-start, end or at baseline. used when we want to override the configuration of a particular element</li>
+        </ol>
+    </p>
+</body>
+</html>

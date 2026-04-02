@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float and Clear</title>
+    <style>
+        .cards{
+            border: 2px solid blue;
+            display: flow-root; /*helps to make the content within the element.*/
+        }
+
+        img{
+            float: left; /*image will float on left and allow content on its right.*/
+        }
+
+        .card{
+            border: 2px solid purple;
+        }
+
+        .card:nth-child(3){
+            background-color: pink;
+            clear: left; /*clear is used to clear out a portion on the website*/
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="https://c0.wallpaperflare.com/preview/227/792/970/silhouette-scenery-sunset-boat.jpg" alt="scenery image" width="444px">
+        <div class="card">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab hic aliquam, et officiis consequuntur ex pariatur dolor, quas amet velit perspiciatis tempora veritatis, blanditiis delectus veniam nobis voluptates consequatur eligendi voluptas. Maiores, delectus porro.
+            </p>
+        </div>
+        <div class="card">
+            Card 2
+            <!-- lorem453 -->
+        </div>
+        <div class="card">Card 3</div>
+    </div>
+
+    <p>
+        shortcut to make &lt;div class="cards"&gt;<br>
+        &lt;div class="card"&gt;&lt;/div&gt;<br>
+        &lt;div class="card"&gt;&lt;/div&gt;<br>
+        &lt;div class="card"&gt;&lt;/div&gt;<br>
+        &lt;/div&gt;
+        <br>
+        we can write .cards&gt;.card*3 and then press enter the above same will be formed.
+    </p>
+    <p>
+        Clear example here is like the image was on left and then content was coming on right be it of any card. Now the 2nd card didnt want anything on its left so will use clear property so that card 2 will come below now instead of coming on the right side of the image. <br>
+        but if i do clear:right then the image will be allowed to come on the left side of the card 2.
+    </p>
+</body>
+</html>
