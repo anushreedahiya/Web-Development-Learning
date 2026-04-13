@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Transforms</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid purple;
+        }
+
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: pink;
+            border: 2px solid black;
+            /* TRANSFORM ROTATION PROPERTY */
+            /* transform: rotate(40deg); */
+            /* 360 degree is 1 turn */
+            /* transform: rotate(0.25turn); */
+            /* transform: rotateX(40deg); */
+            /* transform: rotateY(96deg); */
+            /* transform: rotateZ(9deg); */
+
+            /* TRANSFORM SCALE PROPERTY*/
+            /* transform: scale(1.6); */
+            /* transform: scaleX(1.6); */
+
+            /* TRANSFORM SKEW PROPERTY */
+            /* transform: skew(5deg); */
+            /* transform: skewX(45deg); */
+
+            /* TRANSFORM TRANSLATE PROPERTY */
+            /* transform: translateX(34px); */
+            /* transform: translateX(100%); */
+            
+            /* WE CAN APPLY MULTIPLE TRANSFORM PROPERTY IN A SINGLE TRANSFORM ELEMENT ONLY */
+            /* transform: translateX(34px) skew(5deg) translateY(56px); */
+            transform: translateX(-20px) skew(5deg) translateY(56px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box</div>
+    </div>
+
+    <p>
+        <ul>
+            <li>while transforming, x-axis flows out of the screen, y is normal vertical and z is inside to the screen.</li>
+            <li>we cannot use skew in z-axis. only in x and y axis it is available</li>
+            <li>We can also apply multiple transform properties just by separating them through a space in a single transform element.</li>
+            <li>we can also use - in translate function in transform and the object will vanish from our screen.</li>
+        </ul>
+    </p>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Animation</title>
+    <style>
+        .container{
+            background-color: rgb(9, 106, 106);
+            height: 50vh;
+            width: 30vw;
+
+        }
+
+        .box{
+            width: 44px;
+            height: 40px;
+            /* background-color: pink; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation-name: animationCss;
+            animation-duration: 3s;
+            animation-iteration-count: 2;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+            animation-delay: 1s; */
+            /* animation-direction: reverse; */
+            /* animation-direction: alternate-reverse; */
+            /* animation-play-state: paused; */
+            /* animation: animationCss 3s ease-in-out 1s infinite; */
+            /* animation: animationCss 3s ease-in-out 1s forwards; */ /*it will stop after completing the transaction and wont return to initial style.*/
+            /* animation: animationCss 3s ease-in-out 1s backwards; */ /*it will redeem the inital style at the end*/
+            /* WE CAN APPLY MULTIPLE ANIMATIONS BY SEPARATING THEM WITH COMMA:*/
+            animation: animationCss 2s ease-in-out 1s backwards,
+                        newAnimation 3s ease-in-out 3s 1;
+        }
+
+        @keyframes animationCss {
+            from{
+                background-color: orange;
+            }
+            to{
+                background-color: yellow;
+                transform: translateX(1000px);
+            }
+        }
+
+        @keyframes newAnimation {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            50%{
+                transform: rotate(220deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+            100%{
+                transform: rotate(320deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box    </div>
+    </div>
+
+    <p>
+        <ul>
+            <li>in css to make animations we directly use keyframes.</li>
+            <li>animation has 7 key elements in it:-<br> name;<br> duration;<br> timing-function;<br> delay;<br> iteration-count;<br> direction;<br> fill-mode</li>
+        </ul>
+    </p>
+</body>
+</html>
